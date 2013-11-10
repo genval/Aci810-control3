@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void onClickSubmit(View view){
-		Intent intent = new Intent(this,Activity.class);
+		Intent intent = new Intent(this,SubmitActivity.class);
 		
 		EditText editText = (EditText)findViewById(R.id.editText1);
 		String helloWorld = editText.getText().toString();
