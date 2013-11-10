@@ -5,10 +5,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
+
 
 public class SubmitActivity extends Activity {
 
@@ -25,6 +30,7 @@ public class SubmitActivity extends Activity {
 		Boolean radButton0 = sharedPref.getBoolean(MainActivity.RADIO_BUT0, false);
 		Boolean radButton1 = sharedPref.getBoolean(MainActivity.RADIO_BUT1, false);
 		Boolean radButton2 = sharedPref.getBoolean(MainActivity.RADIO_BUT2, false);
+		int sbar = sharedPref.getInt(MainActivity.SEEK_BAR,0);  
 		
 		TextView hello = (TextView)findViewById (R.id.textView1);
 		hello.setText(helloWorld);
@@ -33,6 +39,17 @@ public class SubmitActivity extends Activity {
 		swt.setChecked(swtvalue);
 		
 		RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup2);
+		//
+		RadioButton rbut0 = (RadioButton)findViewById(R.id.radio01);
+		//
+		RadioButton rbut1 = (RadioButton)findViewById(R.id.radio12);
+		//
+		RadioButton rbut2 = (RadioButton)findViewById(R.id.radio23);
+		//
+		SeekBar sb = (SeekBar)findViewById(R.id.seekBar2);
+		sb= setProgress(sbar); 
+		
+		
 		
 		
 		
@@ -54,4 +71,21 @@ public class SubmitActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// This ID represents the Home or Up button. In the case of this
+			// activity, the Up button is shown. Use NavUtils to allow users
+			// to navigate up one level in the application structure. For
+			// more details, see the Navigation pattern on Android Design:
+			//
+			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
+			//
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 }

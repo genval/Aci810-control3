@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.aci810_control3.Activity"
+            android:name="com.example.aci810_control3.SubmitActivity"
             android:label="@string/title_activity_" >
         </activity>
     </application>
