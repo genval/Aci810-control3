@@ -39,13 +39,13 @@ public class SubmitActivity extends Activity {
 		swt.setChecked(swtvalue);
 		
 		RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup2);
-		//
+		rg = check (radioGroup);
 		RadioButton rbut0 = (RadioButton)findViewById(R.id.radio01);
-		//
+		rbut0 = setChecked(radButton0);
 		RadioButton rbut1 = (RadioButton)findViewById(R.id.radio12);
-		//
+		rbut1 = setChecked(radButton1);
 		RadioButton rbut2 = (RadioButton)findViewById(R.id.radio23);
-		//
+		rbut2 = setChecked(radButton2);
 		SeekBar sb = (SeekBar)findViewById(R.id.seekBar2);
 		sb= setProgress(sbar); 
 		
