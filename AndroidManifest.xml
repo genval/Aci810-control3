@@ -26,6 +26,10 @@
             android:name="com.example.aci810_control3.SubmitActivity"
             android:label="@string/title_activity_" >
         </activity>
+        <activity
+            android:name="com.example.aci810_control3.PrimeraActivity"
+            android:label="@string/title_activity_primera" >
+        </activity>
     </application>
 
 </manifest>
