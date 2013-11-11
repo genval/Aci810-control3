@@ -9,7 +9,6 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -26,36 +25,25 @@ public class SubmitActivity extends Activity {
 		
 		String helloWorld = sharedPref.getString(MainActivity.HELLO_WORLD, "not set");
 		Boolean swtvalue = sharedPref.getBoolean(MainActivity.SWITCH_VALUE, false);
-		int radioGroup = sharedPref.getInt(MainActivity.RADIO_GROUP,0);
 		Boolean radButton0 = sharedPref.getBoolean(MainActivity.RADIO_BUT0, false);
 		Boolean radButton1 = sharedPref.getBoolean(MainActivity.RADIO_BUT1, false);
 		Boolean radButton2 = sharedPref.getBoolean(MainActivity.RADIO_BUT2, false);
 		int sbar = sharedPref.getInt(MainActivity.SEEK_BAR,0);  
 		
 		TextView hello = (TextView)findViewById (R.id.textView1);
-		hello.setText(helloWorld);
-		
+		hello.setText(helloWorld);		
 		Switch swt = (Switch)findViewById(R.id.switch2);
-		swt.setChecked(swtvalue);
-		
-		RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup2);
-		rg = check (radioGroup);
+		swt.setChecked(swtvalue);		
 		RadioButton rbut0 = (RadioButton)findViewById(R.id.radio01);
-		rbut0 = setChecked(radButton0);
+		rbut0.setChecked(radButton0);
 		RadioButton rbut1 = (RadioButton)findViewById(R.id.radio12);
-		rbut1 = setChecked(radButton1);
+		rbut1.setChecked(radButton1);
 		RadioButton rbut2 = (RadioButton)findViewById(R.id.radio23);
-		rbut2 = setChecked(radButton2);
+		rbut2.setChecked(radButton2);
 		SeekBar sb = (SeekBar)findViewById(R.id.seekBar2);
-		sb= setProgress(sbar); 
-		
-		
-		
-		
-		
-		setupActionBar();
-		
-		
+		sb.setProgress(sbar);
+				
+		setupActionBar();		
 		
 	}
 
