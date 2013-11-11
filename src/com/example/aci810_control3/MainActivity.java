@@ -40,10 +40,10 @@ public class MainActivity extends Activity {
 		EditText editText = (EditText)findViewById(R.id.editText1);
 		String helloWorld = editText.getText().toString();
 		Switch swt = (Switch)findViewById(R.id.switch1);
-		boolean swtvalue = swt.isChecked();
+		Boolean swtvalue = swt.isChecked();
 		
-		SharedPreferences sharedPref1 = getSharedPreferences("preferences1",Context.MODE_PRIVATE);
-		SharedPreferences.Editor editor = sharedPref1.edit();
+		SharedPreferences sharedPref = getSharedPreferences("preferences",Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = sharedPref.edit();
 		
 		editor.putString(HELLO_WORLD, helloWorld);
 		editor.putBoolean(SWITCH_VALUE, swtvalue);

@@ -43,11 +43,11 @@ public class PrimeraActivity extends Activity {
 		RadioGroup rg= (RadioGroup)findViewById(R.id.radioGroup1);
 		int r0 =  rg.getCheckedRadioButtonId();
 		RadioButton rb0 = (RadioButton)findViewById(R.id.radio0);
-		boolean rbut0 = rb0.isChecked();
+		Boolean rbut0 = rb0.isChecked();
 		RadioButton rb1 = (RadioButton)findViewById(R.id.radio1);
-		boolean rbut1 = rb1.isChecked();
+		Boolean rbut1 = rb1.isChecked();
 		RadioButton rb2 = (RadioButton)findViewById(R.id.radio2);
-		boolean rbut2 = rb2.isChecked();
+		Boolean rbut2 = rb2.isChecked();
 		SeekBar sb = (SeekBar)findViewById(R.id.seekBar1);
 		int seekB = sb.getProgress();
 		
